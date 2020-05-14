@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 
-<HTML>
+<HTML onload="changeGameLanguage()" onchange="changeGameLanguage()">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
     <body>
-        <h1 id="welcome-h1">Welcome</h1>
-        <p id="p-about"></p>
-        <select name="" id="lang-select">
-            <option value="0">english</option>
-            <option value="1">portuguese</option>
+        <div id="header">
+        <h1 id="name"></h1>
+        <h1 id="description">Welcome</h1>
+        <p id="rate"></p>
+        <a href="command.html">command</a>
+        </div>
+    <select name="" id="lang-select">
+            <option value=0>english</option>
+            <option value=1>portuguese</option>
         </select>
-        <script src="script.js"></script>
+
+        <select name="" id="game-select" onchange="changeGameLanguage()">
+            <option value='none' selected disable>choose</option>
+            <option value='LOL' title="LoL">LoL</option>
+            <option value='CSGO'>CSGO</option>
+            <option value="Rocket_League">Rocket League</option>
+            </select>
         <script src="languages.js"></script>
+        <script src="script.js"></script>
     </body>
 
 </HTML>
